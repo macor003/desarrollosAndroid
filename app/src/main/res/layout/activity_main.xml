@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="7"
+                android:text=""
                 android:textAlignment="viewEnd"
                 android:textSize="30sp" />
         </LinearLayout>
@@ -67,7 +67,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/ripple_effect"
                 android:text="@string/number_seven"
                 android:onClick="addNumber"
                 android:id="@+id/number7"
@@ -80,6 +80,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:text="@string/number_eight"
+                android:onClick="addNumber"
                 android:textColor="@android:color/background_light" />
 
             <Button
@@ -89,6 +90,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:text="@string/number_nine"
+                android:onClick="addNumber"
                 android:textColor="@android:color/background_light" />
 
             <Button
@@ -114,6 +116,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:text="@string/number_four"
+                android:onClick="addNumber"
                 android:textColor="@android:color/background_light" />
 
             <Button
@@ -123,6 +126,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:text="@string/number_five"
+                android:onClick="addNumber"
                 android:textColor="@android:color/background_light" />
 
             <Button
@@ -132,6 +136,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:text="@string/number_six"
+                android:onClick="addNumber"
                 android:textColor="@android:color/background_light" />
 
             <Button
@@ -157,6 +162,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:text="@string/number_one"
+                android:onClick="addNumber"
                 android:textColor="@android:color/background_light" />
 
             <Button
@@ -166,6 +172,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:text="@string/number_two"
+                android:onClick="addNumber"
                 android:textColor="@android:color/background_light" />
 
             <Button
@@ -175,6 +182,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:text="@string/number_three"
+                android:onClick="addNumber"
                 android:textColor="@android:color/background_light" />
 
             <Button
