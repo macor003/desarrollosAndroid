@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -23,222 +23,258 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:fontFamily="sans-serif"
-                android:textAlignment="viewEnd"
-                android:textSize="36sp"
-                android:textStyle="bold" />
+                android:gravity="right|center_vertical"
+                android:textAppearance="@android:style/TextAppearance.Material.Title"
+                android:textSize="44sp"
+                tools:ignore="NestedWeights"
+                tools:text="1" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textResult"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text=""
                 android:textAlignment="viewEnd"
                 android:textSize="30sp" />
+
         </LinearLayout>
 
-        <!--Boton clear-->
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            style="@android:style/Widget.Material.Light.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@color/colorAccent"
-            android:id="@+id/clear"
-            android:onClick="clearText"
-            android:text="@string/clear" />
+            android:orientation="vertical">
 
-    </LinearLayout>
-
-        <!--Boton 7,8,9 y /-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
+            <!--Boton clear-->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/ripple_effect"
-                android:text="@string/number_seven"
-                android:onClick="addNumber"
-                android:id="@+id/number7"
-                android:textColor="@android:color/background_light" />
+                android:orientation="horizontal">
 
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/clear"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_operator"
+                    android:onClick="clearText"
+                    android:text="@string/clear" />
+
+            </LinearLayout>
+
+            <!--Boton 7,8,9 y /-->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/number_eight"
-                android:onClick="addNumber"
-                android:textColor="@android:color/background_light" />
+                android:orientation="horizontal">
 
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/number7"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="addNumber"
+                    android:text="@string/number_seven"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="addNumber"
+                    android:text="@string/number_eight"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="addNumber"
+                    android:text="@string/number_nine"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_operator"
+                    android:onClick="addOperation"
+                    android:text="@string/symbol_split"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <!--Boton 4, 5, 6 y X-->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/number_nine"
-                android:onClick="addNumber"
-                android:textColor="@android:color/background_light" />
+                android:orientation="horizontal">
 
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="addNumber"
+                    android:text="@string/number_four"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="addNumber"
+                    android:text="@string/number_five"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="addNumber"
+                    android:text="@string/number_six"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_operator"
+                    android:onClick="addOperation"
+                    android:text="@string/symbol_multiplication"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <!--Boton 1, 2, 3 y - -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@color/colorAccent"
-                android:text="@string/symbol_split" />
+                android:orientation="horizontal">
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="addNumber"
+                    android:text="@string/number_one"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="addNumber"
+                    android:text="@string/number_two"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="addNumber"
+                    android:text="@string/number_three"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_operator"
+                    android:onClick="addNumber"
+                    android:text="@string/symbol_less"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <!--Boton . 0 = y + -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:text="@string/symbol_dot"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:onClick="addNumber"
+                    android:text="@string/number_zero"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect"
+                    android:text="@string/symbol_equal"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+                <Button
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_effect_operator"
+                    android:onClick="addOperation"
+                    android:text="@string/symbol_plus"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <!--Boton clear-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/number_four"
-                android:onClick="addNumber"
-                android:textColor="@android:color/background_light" />
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/number_five"
-                android:onClick="addNumber"
-                android:textColor="@android:color/background_light" />
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/number_six"
-                android:onClick="addNumber"
-                android:textColor="@android:color/background_light" />
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorAccent"
-                android:text="@string/symbol_multiplication" />
-
-        </LinearLayout>
-
-        <!--Boton clear-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/number_one"
-                android:onClick="addNumber"
-                android:textColor="@android:color/background_light" />
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/number_two"
-                android:onClick="addNumber"
-                android:textColor="@android:color/background_light" />
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/number_three"
-                android:onClick="addNumber"
-                android:textColor="@android:color/background_light" />
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorAccent"
-                android:text="@string/symbol_less"
-                android:textSize="14sp" />
-
-        </LinearLayout>
-
-        <!--Boton clear-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/symbol_dot"
-                android:textColor="@android:color/background_light" />
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/number_zero"
-                android:textColor="@android:color/background_light" />
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorPrimary"
-                android:text="@string/symbol_equal"
-                android:textColor="@android:color/background_light" />
-
-            <Button
-                style="@android:style/Widget.Material.Light.Button.Borderless"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorAccent"
-                android:text="@string/symbol_plus"
-                android:textSize="14sp" />
-
-        </LinearLayout>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
