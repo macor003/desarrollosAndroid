@@ -10,14 +10,35 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@mipmap/ic_epa_foreground" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Iniciar Sesión"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30sp" />
 
 
         <EditText
             android:id="@+id/editText"
+            style="@android:style/Widget.Material.EditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
@@ -25,18 +46,26 @@
 
         <EditText
             android:id="@+id/editText2"
+            style="@android:style/Widget.Material.EditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
-            android:text="Contraseña"/>
+            android:text="Contraseña" />
 
         <Button
             android:id="@+id/button2"
+            style="@android:style/Widget.Material.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:background="@color/colorPrimaryDark"
+            android:text="Button"
+            android:textColor="@android:color/background_light" />
 
 
     </LinearLayout>
+
+
+
+
 </android.support.constraint.ConstraintLayout>
