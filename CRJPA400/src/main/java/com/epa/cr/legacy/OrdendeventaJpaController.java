@@ -582,7 +582,7 @@ public class OrdendeventaJpaController extends AbstractJPAController {
      * @param date Date
      * @return List<Order>
      */
-    public List<Order> findOrdenDeVentaByType_Status(long orderTypeIDWaitingSale, String statusOrderStarted,
+    public List<Order> findOrdenDeVentaByType_Status(long orderTypeIDWaitingSale,
                                                      Date date) {
 
         EntityManager em = emf.createEntityManager();

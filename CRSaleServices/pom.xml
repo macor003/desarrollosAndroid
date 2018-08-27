@@ -82,7 +82,7 @@
 		<dependency>
 			<groupId>com.grid.ventas.cr</groupId>
 			<artifactId>CRJPA400</artifactId>
-			<version>${cr.version}</version>
+			<version>3.0.0-GT-Diplomado</version>
 		</dependency>
 		<dependency>
 			<groupId>com.grid.ventas.cr</groupId>

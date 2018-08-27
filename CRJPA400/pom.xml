@@ -3,13 +3,14 @@
 	<parent>
 		<groupId>com.grid.ventas.cr</groupId>
 		<artifactId>CRSystem</artifactId>
-		<version>3.0.0-GT</version>
+		<version>3.0.0-GT</version>		
 		<relativePath>../CRSystem</relativePath>
 	</parent>
 
 	<artifactId>CRJPA400</artifactId>
 	<packaging>jar</packaging>
 	<name>CRJPA400</name>
+	<version>3.0.0-GT-Diplomado</version>
 	<description />
 
 	<properties>
