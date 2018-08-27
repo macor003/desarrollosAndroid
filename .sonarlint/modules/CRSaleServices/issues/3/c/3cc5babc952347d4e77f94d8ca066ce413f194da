@@ -1,0 +1,19 @@
+
+xsquid:S1155ž">Use isEmpty() to check whether the collection is empty or not.(¼€˜ÿüÿÿÿÿ8öÛ¯è×,H’RMINORZ
+CODE_SMELL
+ªsquid:S1192„"rDefine a constant instead of duplicating this literal "Error al intentar actualizar comanda electronica " 3 times.(þ½“è8¿Ä«è×,HýRCRITICALZ
+CODE_SMELL
+psquid:S25893"7Remove this expression which always evaluates to "true"(ó˜¯ýÿÿÿÿ8¿Ä«è×,HÿRMAJORZ
+CODE_SMELL
+‰squid:S3776R"RRefactor this method to reduce its Cognitive Complexity from 50 to the 15 allowed.(òÓºÜ8¿Ä«è×,HƒRCRITICALZ
+CODE_SMELL
+qsquid:UnusedPrivateMethod¯")Remove this unused private "info" method.(©öÕ ùÿÿÿÿ8¿Ä«è×,HüRMAJORZ
+CODE_SMELL
+Žsquid:S3776."RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(³°’ûÿÿÿÿ8¿Ä«è×,H‚RCRITICALZ
+CODE_SMELL
+wsquid:S11559">Use isEmpty() to check whether the collection is empty or not.(¼€˜ÿüÿÿÿÿ8ÀÄ«è×,H‡RMINORZ
+CODE_SMELL
+nsquid:S1141v"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8¿Ä«è×,HþRMAJORZ
+CODE_SMELL
+wsquid:S1155_">Use isEmpty() to check whether the collection is empty or not.(¼€˜ÿüÿÿÿÿ8ÀÄ«è×,H†RMINORZ
+CODE_SMELL

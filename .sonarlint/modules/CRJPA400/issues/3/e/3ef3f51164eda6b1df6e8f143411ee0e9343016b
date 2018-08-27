@@ -1,0 +1,110 @@
+
+Ysquid:S1148®"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHáRMINORZVULNERABILITY
+‚squid:S00100É"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶çÍúşÿÿÿÿHØRMINORZ
+CODE_SMELL
+usquid:S00112×"FDefine and throw a dedicated exception instead of using a generic one.(Àéø÷HŞRMAJORZ
+CODE_SMELL
+ó%squid:RedundantThrowsDeclarationCheckª"¥Remove the declaration of thrown exception 'com.becoblohm.cr.crjpa400.controller.exceptions.NonexistentEntityException' which is a subclass of 'java.lang.Exception'.(Õ»‹€ÿÿÿÿÿH½RMINORZ
+CODE_SMELL
+|squid:S00100U"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¦õµøHÕRMINORZ
+CODE_SMELL
+k
+squid:S106º"9Replace this use of System.out or System.err by a logger.(ËÊ¢½ùÿÿÿÿHÌRMAJORZ
+CODE_SMELL
+k
+squid:S106­"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿHËRMAJORZ
+CODE_SMELL
+qsquid:S1155Û">Use isEmpty() to check whether the collection is empty or not.(è§¼ÌûÿÿÿÿHîRMINORZ
+CODE_SMELL
+k
+squid:S106”"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿHÎRMAJORZ
+CODE_SMELL
+ó%squid:RedundantThrowsDeclarationCheckÖ"¥Remove the declaration of thrown exception 'com.becoblohm.cr.crjpa400.controller.exceptions.NonexistentEntityException' which is a subclass of 'java.lang.Exception'.(œÎ•ııÿÿÿÿH¿RMINORZ
+CODE_SMELL
+—squid:S4165š"dRemove this useless assignment; "result" already holds the assigned value along all execution paths.(‘óÖıÿÿÿÿHÅRMAJORZ
+CODE_SMELL
+ó%squid:RedundantThrowsDeclarationCheckˆ"¥Remove the declaration of thrown exception 'com.becoblohm.cr.crjpa400.controller.exceptions.NonexistentEntityException' which is a subclass of 'java.lang.Exception'.(œÎ•ııÿÿÿÿHÁRMINORZ
+CODE_SMELL
+ï%squid:RedundantThrowsDeclarationCheck‡"¡Remove the declaration of thrown exception 'com.becoblohm.cr.crjpa400.controller.exceptions.IllegalOrphanException' which is a subclass of 'java.lang.Exception'.(ŠÅ°ÇüÿÿÿÿHÀRMINORZ
+CODE_SMELL
+}squid:S00100¾"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹Ş„ïHÚRMINORZ
+CODE_SMELL
+‡squid:S1192ü"VDefine a constant instead of duplicating this literal "Ordendeventa.findById" 3 times.(åò‰òHÄRCRITICALZ
+CODE_SMELL
+jsquid:S2589–"7Remove this expression which always evaluates to "true"(ØÌ”ÒúÿÿÿÿHÓRMAJORZ
+CODE_SMELL
+˜squid:S1149ì"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(èŒışÿÿÿÿHíRMAJORZ
+CODE_SMELL
+˜squid:S1149›"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(œ¶Ì‚úÿÿÿÿHêRMAJORZ
+CODE_SMELL
+“squid:S1149Í"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(Ë‘ öHëRMAJORZ
+CODE_SMELL
+‚squid:S00100˜"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™³êÿÿÿÿÿH×RMINORZ
+CODE_SMELL
+‚squid:S00100Ì"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÌ”œøÿÿÿÿHÛRMINORZ
+CODE_SMELL
+usquid:S00112‰"FDefine and throw a dedicated exception instead of using a generic one.(Àéø÷HßRMAJORZ
+CODE_SMELL
+|squid:S00100v"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«â‚êHÖRMINORZ
+CODE_SMELL
+~squid:S1192\"IDefine a constant instead of duplicating this literal "clientId" 5 times.(ãÓ¤úÿÿÿÿHÃRCRITICALZ
+CODE_SMELL
+—squid:S1149W"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(…€ë·ûÿÿÿÿHãRMAJORZ
+CODE_SMELL
+—squid:S1149y"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(œ¶Ì‚úÿÿÿÿHçRMAJORZ
+CODE_SMELL
+’squid:S1149U"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(¦õµøHâRMAJORZ
+CODE_SMELL
+˜squid:S1149š"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(…€ë·ûÿÿÿÿHéRMAJORZ
+CODE_SMELL
+˜squid:S1149ë"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(Ì‡Ø²úÿÿÿÿHìRMAJORZ
+CODE_SMELL
+|squid:S1192¡"FDefine a constant instead of duplicating this literal "fecha" 3 times.(ËŠ™–üÿÿÿÿHÂRCRITICALZ
+CODE_SMELL
+’squid:S1149v"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(«â‚êHåRMAJORZ
+CODE_SMELL
+ï%squid:RedundantThrowsDeclarationCheckÕ"¡Remove the declaration of thrown exception 'com.becoblohm.cr.crjpa400.controller.exceptions.IllegalOrphanException' which is a subclass of 'java.lang.Exception'.(ÓùÀıÿÿÿÿH¾RMINORZ
+CODE_SMELL
+f
+squid:S106Ö"9Replace this use of System.out or System.err by a logger.(ˆ×ÊıHÍRMAJORZ
+CODE_SMELL
+jsquid:S2589ÿ"7Remove this expression which always evaluates to "true"(ØÌ”ÒúÿÿÿÿHÒRMAJORZ
+CODE_SMELL
+k
+squid:S106‰"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿHÊRMAJORZ
+CODE_SMELL
+jsquid:S2589±"7Remove this expression which always evaluates to "true"(ØÌ”ÒúÿÿÿÿHÑRMAJORZ
+CODE_SMELL
+Ysquid:S1168â"+Return an empty collection instead of null.(¥¹ïHÜRMAJORZ
+CODE_SMELL
+~squid:CommentedOutCodeLine×"<This block of commented-out lines of code should be removed.(¨´‚ÂüÿÿÿÿHÆRMAJORZ
+CODE_SMELL
+—squid:S1149X"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(œ¶Ì‚úÿÿÿÿHäRMAJORZ
+CODE_SMELL
+|squid:S00100ş"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸Œ HÙRMINORZ
+CODE_SMELL
+—squid:S1149x"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(…€ë·ûÿÿÿÿHæRMAJORZ
+CODE_SMELL
+ysquid:CommentedOutCodeLine•"<This block of commented-out lines of code should be removed.(ğŠ¶°HÇRMAJORZ
+CODE_SMELL
+ysquid:CommentedOutCodeLine™"<This block of commented-out lines of code should be removed.(°›­±HÈRMAJORZ
+CODE_SMELL
+˜squid:S1149˜"eReplace the synchronized class "Vector" by an unsynchronized one such as "ArrayList" or "LinkedList".(™³êÿÿÿÿÿHèRMAJORZ
+CODE_SMELL
+qsquid:S1155Ã">Use isEmpty() to check whether the collection is empty or not.(ÉŸÙÚıÿÿÿÿHïRMINORZ
+CODE_SMELL
+j
+squid:S106i"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿHÉRMAJORZ
+CODE_SMELL
+Tsquid:S1481§"&Remove this unused "i" local variable.(‘ÃåÿHÔRMINORZ
+CODE_SMELL
+f
+squid:S106ä"9Replace this use of System.out or System.err by a logger.(ö¬HÏRMAJORZ
+CODE_SMELL
+ï%squid:RedundantThrowsDeclarationCheckª"¡Remove the declaration of thrown exception 'com.becoblohm.cr.crjpa400.controller.exceptions.IllegalOrphanException' which is a subclass of 'java.lang.Exception'.(Õ»‹€ÿÿÿÿÿH¼RMINORZ
+CODE_SMELL
+jsquid:S2589±"7Remove this expression which always evaluates to "true"(ØÌ”ÒúÿÿÿÿHĞRMAJORZ
+CODE_SMELL
+Ysquid:S1148Á"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿHàRMINORZVULNERABILITY
+zsquid:S00112ª"FDefine and throw a dedicated exception instead of using a generic one.(Õ»‹€ÿÿÿÿÿHİRMAJORZ
+CODE_SMELL
