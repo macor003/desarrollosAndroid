@@ -9,8 +9,11 @@ import android.widget.Toast;
 import java.util.List;
 
 import io.futurestud.retrofit1.R;
+
+import com.becoblohm.cr.net.response.ServicesResponse;
 import com.macor.practicaretrofit.api.model.GitHubRepo;
 import com.macor.practicaretrofit.api.service.GitHubClient;
+import com.macor.practicaretrofit.api.service.ServiceClient;
 import com.macor.practicaretrofit.ui.adapter.GitHubRepoAdapter;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -33,25 +36,26 @@ public class MainActivity extends AppCompatActivity {
 
 
         Retrofit.Builder builder = new Retrofit.Builder()
-                .baseUrl("https://api.github.com/")
+                .baseUrl("http://10.1.10.45:1092")
                 .addConverterFactory(GsonConverterFactory.create());
 
         Retrofit retrofit = builder.build();
 
-        GitHubClient client = retrofit.create(GitHubClient.class);
-        Call<List<GitHubRepo>> call = client.reposForUser("macor003");
+        ServiceClient client = retrofit.create(ServiceClient.class);
+        Call<List<ServicesResponse>> call = client.searchCommands();
 
-        call.enqueue(new Callback<List<GitHubRepo>>() {
+        call.enqueue(new Callback<List<ServicesResponse>>() {
             @Override
-            public void onResponse(Call<List<GitHubRepo>> call, Response<List<GitHubRepo>> response) {
-                List<GitHubRepo> repos = response.body();
+            public void onResponse(Call<List<ServicesResponse>> call, Response<List<ServicesResponse>> response) {
+                List<ServicesResponse> repos = response.body();
                 progress.dismiss();
 
                 listView.setAdapter(new GitHubRepoAdapter(MainActivity.this, repos));
             }
 
             @Override
-            public void onFailure(Call<List<GitHubRepo>> call, Throwable t) {
+            public void onFailure(Call<List<ServicesResponse>> call, Throwable t) {
+                progress.dismiss();
                 Toast.makeText(MainActivity.this, "error :(", Toast.LENGTH_SHORT).show();
             }
         });
