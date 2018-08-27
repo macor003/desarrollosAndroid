@@ -1,0 +1,9 @@
+* Para desactivar HTTPS (el contenido de las peticiones es visible para cualquier intruso):
+
+1- Comentar (con #) los properties que comienzan con "server.ssl" en el archivo application.properties.
+2- Pasar "false" como el primer parámetro de EPASalesServicesDispatcher.
+
+
+* Para generar las claves de SSL para HTTPS:
+
+keytool -genkey -alias epa -storetype PKCS12 -keyalg RSA -keysize 2048 -keystore keystore.p12 -validity 3650

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean name="checkServicesRefundRuleEngine" class="biz.epa.ruleengine.RuleEngine" init-method="init">
+        <property name="name" value="Refunds Flow" />
+        <property name="firstStep">
+            <ref bean="selectStoreDelegate" />
+        </property>
+    </bean>
+    <bean name="selectStoreDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.SelectStoreDelegate">
+        <property name="positive" ref="searchSaleOnLegacyDelegate" />
+        <property name="negative" ref="searchRemoteSaleDelegate" />
+    </bean>
+    <bean name="searchRemoteSaleDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.SearchRemoteSaleDelegate" >
+        <property name="next" ref="buildSaleDelegate"/>
+    </bean>
+    <bean name="searchSaleOnLegacyDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.SearchSaleOnLegacyDelegate">
+        <property name="positive" ref="buildSaleDelegate" />
+        <property name="negative" ref="searchSaleOnCR400Delegate" />
+    </bean>
+    <bean name="searchSaleOnCR400Delegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.SearchSaleOnCR400Delegate">
+        <property name="positive" ref="buildSaleDelegate" />
+        <property name="negative" ref="buildSaleNotFoundResponseDelegate" />
+    </bean>
+    <bean name="buildSaleDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.BuildSaleDelegate" >
+        <property name="positive" ref="searchRefundHeaderDelegate" />
+        <property name="negative" ref="buildSaleNotFoundResponseDelegate" />
+    </bean>
+    <bean name="searchRefundHeaderDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.SearchRefundHeaderDelegate" >
+        <property name="positive" ref="searchRefundDetailsDelegate" />
+        <property name="negative" ref="buildRefundNotFoundResponseDelegate" />
+    </bean>
+    <bean name="searchRefundDetailsDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.SearchRefundDetailsDelegate" >
+        <property name="positive" ref="searchSpecialOrderDelegate" />
+        <property name="negative" ref="buildRefundNotFoundResponseDelegate" />
+    </bean>
+    <bean name="updateRemoteRefundDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.UpdateRemoteRefundDelegate" >
+        <property name="positive" ref="searchSpecialOrderDelegate" />
+        <property name="negative" ref="buildRefundAlreadyProcesedResponseDelegate" />
+    </bean>
+    <bean name="buildRefundNotFoundResponseDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.BuildRefundNotFoundResponseDelegate" />
+    <bean name="buildSaleNotFoundResponseDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.BuildSaleNotFoundResponseDelegate" />
+    <bean name="searchSpecialOrderDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.SearchSpecialOrderDelegate" >
+        <property name="next" ref="convertToServerClientDelegate" />
+    </bean>
+    <bean id="convertToServerClientDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.ConvertToServerClientDelegate" >
+        <property name="next" ref="buildSuccessResponseDelegate" />
+    </bean>
+    <bean id="buildSuccessResponseDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.BuildSuccessResponseDelegate"/>
+    <bean id="buildRefundAlreadyProcesedResponseDelegate" class="com.grid.ventas.cr.refundrestserver.bussiness.checkservicesrefund.BuildRefundAlreadyProcesedResponseDelegate"/>-->
+</beans>

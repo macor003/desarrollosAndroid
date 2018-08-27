@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="CR400PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>crjpa400.Monedatasacambio</class>
+    <class>crjpa400.Tipoacreenciaoperacion</class>
+    <class>crjpa400.Tasaimpuestovalor</class>
+    <class>crjpa400.Serialimpresora</class>
+    <class>crjpa400.Transacciondocumento</class>
+    <class>crjpa400.Ordendeventa</class>
+    <class>crjpa400.Motivorebaja</class>
+    <class>crjpa400.Clientemensaje</class>
+    <class>crjpa400.Promociontipodescuento</class>
+    <class>crjpa400.Tipoidentificacioncliente</class>
+    <class>crjpa400.Usuario</class>
+    <class>crjpa400.Operacionacreencia</class>
+    <class>crjpa400.Logexepciones</class>
+    <class>crjpa400.Comprobantefiscalnoutilizado</class>
+    <class>crjpa400.Articulocodigoexterno</class>
+    <class>crjpa400.Articulounidadventa</class>
+    <class>crjpa400.Transaccionarticulo</class>
+    <class>crjpa400.Depuracion</class>
+    <class>crjpa400.Acreenciamovimientoformadepago</class>
+    <class>crjpa400.Tipodescuento</class>
+    <class>crjpa400.Transaccioncliente</class>
+    <class>crjpa400.Articuloservicio</class>
+    <class>crjpa400.Devolucion</class>
+    <class>crjpa400.Entrega</class>
+    <class>crjpa400.Movimientoacreencia</class>
+    <class>crjpa400.Promocionfamilia</class>
+    <class>crjpa400.Exoneradoarticulo</class>
+    <class>crjpa400.Familia</class>
+    <class>crjpa400.Moneda</class>
+    <class>crjpa400.Usuarioperfil</class>
+    <class>crjpa400.Transaccionformadepago</class>
+    <class>crjpa400.Transaccionfase</class>
+    <class>crjpa400.Detalletipoformadepagolinea</class>
+    <class>crjpa400.Promocionformadepago</class>
+    <class>crjpa400.Detalletipoformadepago</class>
+    <class>crjpa400.Tipodocumento</class>
+    <class>crjpa400.Convertidortipodescto</class>
+    <class>crjpa400.Acreencia</class>
+    <class>crjpa400.Tipoacreencia</class>
+    <class>crjpa400.Transaccion</class>
+    <class>crjpa400.TransaccionPendiente</class>
+    <class>crjpa400.Exoneradotipo</class>
+    <class>crjpa400.Entregaformadepago</class>
+    <class>crjpa400.Abonoformadepago</class>
+    <class>crjpa400.Monedadenominacion</class>
+    <class>crjpa400.Unidadventa</class>
+    <class>crjpa400.Promocionarticulo</class>
+    <class>crjpa400.Opcion</class>
+    <class>crjpa400.Transaccionauditoria</class>
+    <class>crjpa400.Categorialineaincluye</class>
+    <class>crjpa400.Transaccionexceptions</class>
+    <class>crjpa400.Categoria</class>
+    <class>crjpa400.Sesion</class>
+    <class>crjpa400.Tasaimpuestotipo</class>
+    <class>crjpa400.Cuentacredito</class>
+    <class>crjpa400.Reportez</class>
+    <class>crjpa400.Proceso</class>
+    <class>crjpa400.Articulo</class>
+    <class>crjpa400.Sincronizacion</class>
+    <class>crjpa400.Formadepagopuntoagil</class>
+    <class>crjpa400.Morosidad</class>
+    <class>crjpa400.Abono</class>
+    <class>crjpa400.Acreenciamovimiento</class>
+    <class>crjpa400.Saldoacreencia</class>
+    <class>crjpa400.Acreenciamovimientoauditoria</class>
+    <class>crjpa400.Pagocredito</class>
+    <class>crjpa400.Formadepagomovacreencia</class>
+    <class>crjpa400.Linea</class>
+    <class>crjpa400.Tipoordendeventa</class>
+    <class>crjpa400.Tipoclientetipodocumento</class>
+    <class>crjpa400.Transaccionarticuloservicio</class>
+    <class>crjpa400.Auditoria</class>
+    <class>crjpa400.Perfil</class>
+    <class>crjpa400.Formadepago</class>
+    <class>crjpa400.Comprobantefiscalpreimpreso</class>
+    <class>crjpa400.Ordendeventaarticulo</class>
+    <class>crjpa400.Servicio</class>
+    <class>crjpa400.Cliente</class>
+    <class>crjpa400.Ordendeventatransaccion</class>
+    <class>crjpa400.Promocionlinea</class>
+    <class>crjpa400.Perfilproceso</class>
+    <class>crjpa400.Procesoproperty</class>
+    <class>crjpa400.Formadepagomoneda</class>
+    <class>crjpa400.Caja</class>
+    <class>crjpa400.Acreenciamovimientosaldo</class>
+    <class>crjpa400.Categorialinearetencion</class>
+    <class>crjpa400.Porcentajeimpuestoretencion</class>
+    <class>crjpa400.Giroactividadeconomica</class>
+    <class>crjpa400.Promocion</class>
+    <class>crjpa400.Rolloauditoria</class>
+    <class>crjpa400.Exceptions</class>
+    <class>crjpa400.Tipocliente</class>
+    <class>crjpa400.Promocioncategoria</class>
+    <class>crjpa400.Condicionentrega</class>
+	<class>crjpa400.Ordendeventaarticulocondicionentrega</class>    
+	<class>crjpa400.Estadoordendeventa</class>
+	<class>crjpa400.Sincronizacionporcaja</class>
+	<class>crjpa400.Sincronizacionpendientes</class>
+	<class>crjpa400.Origenordendeventa</class>
+	<class>crjpa400.Formadepagotipocliente</class>
+	<class>crjpa400.Devolucionremota</class>
+	<class>crjpa400.Historialdevolucion</class>
+	<class>crjpa400.Devolucionarticulo</class>
+	<class>crjpa400.Motivodevolucion</class>
+    <shared-cache-mode>ALL</shared-cache-mode>
+
+    <properties>
+        <property name="eclipselink.logging.level" value="FINE"/>
+        <!--<property name="eclipselink.profiler" value="PerformanceProfiler"/>-->
+
+		<property name="javax.persistence.query.timeout" value="5000" />
+		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://servidor400:3306/CR400"/>
+		<property name="javax.persistence.jdbc.password" value="S3cc1on_Bd@t05"/>
+      	<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      	<property name="javax.persistence.jdbc.user" value="soportebd"/>
+		<!-- <property name="javax.persistence.lock.timeout" value="4000" /> -->
+		<property name="eclipselink.query-results-cache" value="true" />
+		<property name="eclipselink.cache.size.Cliente" value="1000" />
+		<property name="eclipselink.cache.size.Articulo" value="5000" />
+		<property name="eclipselink.cache.type.default" value="SoftWeak" />
+		<property name="eclipselink.cache.size.default" value="1000" />
+		<property name="eclipselink.jdbc.read-connections.max" value="2" />
+		<property name="eclipselink.jdbc.read-connections.min" value="1" />
+		<property name="eclipselink.jdbc.read-connections.shared" value="true" />
+		<property name="eclipselink.jdbc.write-connections.max" value="2" />
+		<property name="eclipselink.jdbc.write-connections.min" value="1" />
+		<property name="eclipselink.jdbc.cache-statements" value="true" />
+		<property name="eclipselink.jdbc.batch-writing" value="JDBC" />
+		<property name="eclipselink.jdbc.batch-writing.size" value="1000" />
+        <!-- 	<property name="eclipselink.logging.level" value="FINE"/>	 -->
+    </properties>
+  </persistence-unit>
+</persistence>
