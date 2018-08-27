@@ -1,0 +1,8 @@
+com.becoblohm.cr.init.Updateinit
+com.becoblohm.cr.init.DBinit
+com.becoblohm.cr.init.SYNCinit
+com.becoblohm.cr.init.IntegrityDBCheck
+com.becoblohm.cr.init.Validationinit
+com.becoblohm.cr.init.Correlativeinit
+com.becoblohm.cr.init.IOinit
+com.becoblohm.cr.init.Ntpinit

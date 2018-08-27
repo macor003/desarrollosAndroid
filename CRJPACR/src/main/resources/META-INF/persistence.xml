@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+<!-- <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"> -->
+  <persistence-unit name="CRPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.grid.ventas.cr.crjpacrsrc.Devolucionventa</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Estadodecaja</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Puntoagilformadepago</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Usuario</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Acreencias</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Saldocliente</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Afiliado</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Puntoagilplancreditoepa</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Errormaquinafiscal</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Donacion</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Puntoagiloperacion</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Controldeformularios</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Puntoagiltipocuenta</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Detalletransaccion</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Afiliadoextra</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Girocontribuyente</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Caja</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Servicio</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Puntoagilcuentasespeciales</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Puntoagilcaja</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Puntoagilprocesoestadocaja</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Tienda</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Formadepago</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Controlacreencias</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Pagoacreencia</class>
+    <class>com.grid.ventas.cr.crjpacrsrc.Transaccion</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:as400://servidor400/CR"/>
+      <property name="javax.persistence.jdbc.user" value="userdb2"/>
+      <property name="javax.persistence.jdbc.driver" value="com.ibm.as400.access.AS400JDBCDriver"/>
+      <property name="javax.persistence.jdbc.password" value="userdb2"/>
+    </properties>
+  </persistence-unit>
+</persistence>

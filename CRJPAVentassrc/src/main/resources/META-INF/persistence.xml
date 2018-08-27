@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<!-- <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence 
+		http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"> -->
+	<persistence-unit name="CRJPAVENTASPU"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>com.grid.ventas.cr.crjpaventassrc.Cabvpvv</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Maevimp</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Hisvcpr</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Maecec</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Detvlics</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Detvacr</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Opevmcp</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Maeemp</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Opevtma</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Cabvdes</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Opermee</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Maecte</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Hisvacr</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Cabvlics</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Cabvacr</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Opevrtc</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Hisvrez</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Cabvdev</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Maevclaacr</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Hisvdnd</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Opevcpr</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Opevtsc</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Cabvpuw</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Cabvfdp</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Opevdec</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Temcabvacr</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Detvpvv</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Detvpuw</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Cabvpea</class>
+		<class>com.grid.ventas.cr.crjpaventassrc.Maevart</class>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:as400://servidor400/VENTAS" />
+			<property name="javax.persistence.jdbc.user" value="userdb2" />
+			<property name="javax.persistence.jdbc.driver" value="com.ibm.as400.access.AS400JDBCDriver" />
+			<property name="javax.persistence.jdbc.password" value="userdb2" />
+			<property name="javax.persistence.query.timeout" value="5000" />
+			<property name="eclipselink.query-results-cache" value="true" />
+			<property name="eclipselink.cache.type.default" value="SoftWeak" />
+			<property name="eclipselink.cache.size.default" value="1000" />
+			<property name="eclipselink.jdbc.read-connections.max" value="3" />
+			<property name="eclipselink.jdbc.read-connections.min" value="1" />
+			<property name="eclipselink.jdbc.read-connections.shared" value="true" />
+			<property name="eclipselink.jdbc.write-connections.max" value="5" />
+			<property name="eclipselink.jdbc.write-connections.min" value="2" />
+			<property name="eclipselink.jdbc.cache-statements" value="true" />
+			<property name="eclipselink.logging.level" value="off" />
+			<property name="eclipselink.jdbc.batch-writing" value="JDBC" />
+			<property name="eclipselink.jdbc.batch-writing.size" value="1000" />
+		</properties>
+	</persistence-unit>
+</persistence>

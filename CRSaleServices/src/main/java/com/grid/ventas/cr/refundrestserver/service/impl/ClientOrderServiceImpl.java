@@ -4,6 +4,7 @@
 package com.grid.ventas.cr.refundrestserver.service.impl;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -145,6 +146,28 @@ public class ClientOrderServiceImpl implements ClientOrderService {
         return result;
     }
 
+    @Override
+    public ServicesResponse searchCommandsForCurrentDay() {
+
+        debug("Buscando comandas electronicas en base de datos del día: " + java.time.LocalDate.now());
+
+        ServicesResponse result = new ServicesResponse();
+        OrdendeventaJpaController ordenJpa = new OrdendeventaJpaController(entityManagerFactory);
+        String estado = "F";
+
+        List<Order> ordenDeVentaList = ordenJpa.findOrdenDeVentaByType_Status(servicesConf.getClientOrderTypeId(),
+                                                                              estado, new Date());
+        if (ordenDeVentaList != null && ordenDeVentaList.size() > 0) {
+            result.setData(ordenDeVentaList);
+            result.setCode(SpecialOrderResponse.OK);
+        } else {
+            debug("Comandas no encontradas");
+            result.setCode(SpecialOrderResponse.SPECIAL_ORDERS_NOT_FOUND);
+        }
+
+        return result;
+    }
+
     private void debug(String msg) {
         if (logger.isDebugEnabled()) {
             logger.debug(msg);
@@ -156,4 +179,5 @@ public class ClientOrderServiceImpl implements ClientOrderService {
             logger.info(msg);
         }
     }
+
 }

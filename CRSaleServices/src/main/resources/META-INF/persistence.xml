@@ -113,10 +113,10 @@
         <!--<property name="eclipselink.profiler" value="PerformanceProfiler"/>-->
 
 		<property name="javax.persistence.query.timeout" value="5000" />
-		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://servidor400:3306/CR400"/>
-		<property name="javax.persistence.jdbc.password" value="S3cc1on_Bd@t05"/>
+		<property name="javax.persistence.jdbc.url" value="jdbc:mysql://10.19.15.11:3306/CR400"/>
+		<property name="javax.persistence.jdbc.password" value="L%*GWb[:t4;"/>
       	<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-      	<property name="javax.persistence.jdbc.user" value="soportebd"/>
+      	<property name="javax.persistence.jdbc.user" value="egtcO00010"/>
 		<!-- <property name="javax.persistence.lock.timeout" value="4000" /> -->
 		<property name="eclipselink.query-results-cache" value="true" />
 		<property name="eclipselink.cache.size.Cliente" value="1000" />

@@ -1,0 +1,34 @@
+com.becoblohm.cr.utils.CRUtils.removeSpecialChars("120938H>?<E)(*#l)(*L192L731O````W=-0O23423R2093820342L?><?>????D")
+com.becoblohm.cr.utils.CRUtils.removeSpecialChars("Marco Nuñez")(java.lang.String) Marco Nunez
+com.becoblohm.cr.utils.CRUtils.encode("12345");(java.lang.String) 827ccb0eea8a706c4c34a16891f84e7b(java.lang.String) 3955669d8b9c12f5ef1f225969e9d7dd
+com.becoblohm.cr.utils.CRUtils.removeSpecialChars("Tôtal ¢: 20");(java.lang.String) Total ¢: 20
+
+
+//Costa rica
+//Natural
+java.util.regex.Pattern.matches("^[1-9]{1}(\\d{6}|\\d{8})", "123456789");
+//Juridico
+java.util.regex.Pattern.matches("^([1-9]{1}(\\d{6}|\\d{8}))||([2-4]((0*1(0[0-9]|10))||(0*([2-9]|1[0-4]))||([1-3]00))\\d{6})", "123456789");
+java.util.regex.Pattern.matches("[2-4](0*1(0[0-9]|10))\\d{6}",);
+java.util.regex.Pattern.matches("[2-4](0*([2-9]|1[0-4]))\\d{6}", "2300123456");
+java.util.regex.Pattern.matches("[2-4]([1-3]00)\\d{6}");
+
+
+
+//Salvador
+//NRC
+java.util.regex.Pattern.matches("^\\d{1,6}\\-\\d{1}", "1-1");
+//NIT
+java.util.regex.Pattern.matches("^\\d{4}-\\d{6}-\\d{3}-\\d{1}", "1111-111111-111-1");
+//DUI
+
+String.format("","11");
+java.util.regex.Pattern.matches("^\\d{8}-\\d{1}", "12345678-9");
+
+NRC 123456-7, son 6 dígitos seguidos, un guión y 1 dígito final = Este es el máximo, pueden haber con menos dígitos, ejemplo 2-7
+NIT 1234-123456-123-1 = cuatro dígitos guión 6 dígitos guión 3 dígitos guión 1 dígito = Siempre va a ser así.
+DUI 12345678-9 = 8 dígitos guión 1 dígito = existen Duis con menos dígitos pero se rellenan con ceros al inicio.
+
+
+
+"[2-4]((0*1(0[0-9]|10))||(0*([2-9]|1[0-4]))||([1-3]00))\\d{6}".length();(int) 59

@@ -1,0 +1,180 @@
+<configuration debug="false">
+
+	
+	<appender name="BD" class="com.becoblohm.cr.audit.CRAppender">
+		<dbNameResolver class="com.becoblohm.cr.audit.CustomDBNameResolver"/>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>WARN</level>
+		</filter>
+		<connectionSource class="ch.qos.logback.core.db.DataSourceConnectionSource">
+			<dataSource class="com.mchange.v2.c3p0.ComboPooledDataSource">
+				<driverClass>com.mysql.jdbc.Driver</driverClass>
+				<jdbcUrl>jdbc:mysql://localhost:3306/CRPOS</jdbcUrl>
+				<user>usercr2</user>
+				<password>usercr2</password>
+			</dataSource>
+		</connectionSource>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/opt/CR/logs/logFileCR.log</file>
+		<!-- <append>true</append> -->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>/opt/CR/logs/logFileCR.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+
+			<!-- mantener el historial por 7 dias -->
+			<maxHistory>7</maxHistory>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        		<!-- or whenever the file size reaches 5MB -->
+        		<maxFileSize>5MB</maxFileSize>
+      		</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%-4relative %date{dd MMM yyyy ;HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILETHREADS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>/opt/CR/logs/logFileCRThreads.log</file>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>/opt/CR/logs/logFileCRThreads.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+
+			<!-- mantener el historial por 7 dias -->
+			<maxHistory>7</maxHistory>
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        		<!-- or whenever the file size reaches 5MB -->
+        		<maxFileSize>5MB</maxFileSize>
+      		</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%-4relative %date{dd MMM yyyy ;HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILEPRINT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		
+		<file>/opt/CR/logs/logFileCRPrint.log</file>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>/opt/CR/logs/logFileCRPrint.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+
+			<!-- mantener el historial por 1 dia -->
+			<maxHistory>1</maxHistory>
+			
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        		<!-- or whenever the file size reaches 5MB -->
+        		<maxFileSize>5MB</maxFileSize>
+      		</timeBasedFileNamingAndTriggeringPolicy>
+			
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%-4relative %date{dd MMM yyyy ;HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILESYNC" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!-- <filter class="ch.qos.logback.classic.filter.ThresholdFilter"> -->
+		<!-- <level>ERROR</level> -->
+		<!-- </filter> -->
+
+		<file>/opt/CR/logs/logClientSync.log</file>
+
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>/opt/CR/logs/logClientSync.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+
+			<!-- mantener el historial por 1 dia -->
+			<maxHistory>1</maxHistory>
+			
+			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        		<!-- or whenever the file size reaches 5MB -->
+        		<maxFileSize>5MB</maxFileSize>
+      		</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%-4relative %date{dd MMM yyyy ;HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+<!-- 		<filter class="ch.qos.logback.classic.filter.ThresholdFilter"> -->
+<!-- 			<level>INFO</level> -->
+<!-- 		</filter> -->
+		<encoder>
+			<pattern>%-4relative %d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg %n</pattern>
+		</encoder>
+	</appender>
+
+    <logger name="com.mchange" additivity="false"> 
+       	<priority value="ERROR"/>
+    </logger>
+
+	
+	<logger name="com.becoblohm.cr.init.thread" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="FILETHREADS" />
+	</logger>
+ 
+	<logger name="com.becoblohm.cr.client" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="FILETHREADS" />
+		<appender-ref ref="FILE" />
+		<appender-ref ref="STDOUT" />
+	</logger>
+  
+   
+<!--	<logger name="com.becoblohm" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="FILEPRINT" />
+	</logger> -->
+ 
+	<logger name="com.becoblohm.cr.clientsync" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="FILESYNC" />
+	</logger>
+
+ 
+     <logger name="com.becoblohm.cr.printer" additivity="true"> 
+        <level value="DEBUG"/>
+        <appender-ref ref="FILEPRINT"/>
+     </logger>
+
+     <logger name="com.becoblohm.cr.docprinter" additivity="true"> 
+        <level value="DEBUG"/>
+        <appender-ref ref="FILEPRINT"/>
+     </logger>
+     <logger name="com.becoblohm.cr.documents" additivity="true"> 
+        <level value="DEBUG"/>
+        <appender-ref ref="FILEPRINT"/>
+     </logger>
+     
+     <logger name="Database" additivity="true">      
+     	<level value="INFO" />  
+        <appender-ref ref="BD"/>
+     </logger>
+ 	
+	
+	<root>
+		<level value="DEBUG" />
+ 		<appender-ref ref="FILE" /> 
+ 		<appender-ref ref="STDOUT" />
+	</root>
+
+
+</configuration>

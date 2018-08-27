@@ -11,4 +11,6 @@ public interface ClientOrderService {
     ServicesResponse checkServicesClientOrder(Client client);
 
     ServicesResponse deleteServicesClientOrder(Client client);
+    
+    ServicesResponse searchCommandsForCurrentDay();
 }

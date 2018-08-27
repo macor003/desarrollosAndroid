@@ -582,16 +582,15 @@ public class OrdendeventaJpaController extends AbstractJPAController {
      * @param date Date
      * @return List<Order>
      */
-    public List<Order> findOrdenDeVentaByType_Status(long orderTypeIDWaitingSale, char statusOrderStarted,
+    public List<Order> findOrdenDeVentaByType_Status(long orderTypeIDWaitingSale, String statusOrderStarted,
                                                      Date date) {
 
         EntityManager em = emf.createEntityManager();
         Vector<Ordendeventa> result = new Vector<Ordendeventa>();
         try {
             Query query = em
-                    .createQuery("SELECT o FROM Ordendeventa o WHERE o.idTipoordendeventa.id = :id_tipoOrdenDeVenta and o.estado = :estado and o.fecha = :fecha");
+                    .createQuery("SELECT o FROM Ordendeventa o WHERE o.idTipoordendeventa.id = :id_tipoOrdenDeVenta and o.fecha = :fecha");
             query.setParameter("id_tipoOrdenDeVenta", orderTypeIDWaitingSale);
-            query.setParameter("estado", statusOrderStarted);
             query.setParameter("fecha", date);
 
             result = (Vector<Ordendeventa>) query.getResultList();

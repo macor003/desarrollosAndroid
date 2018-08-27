@@ -35,5 +35,11 @@ public class ClientOrderController {
         logger.debug("Recibiendo peticion de /deleteServicesClientOrder");
         return clientOrderService.deleteServicesClientOrder(client);
     }
+    
+    @RequestMapping("/searchCommands")
+    public ServicesResponse searchCommandsForCurrentDay() {
+        logger.debug("Recibiendo peticion de /searchCommands");
+        return clientOrderService.searchCommandsForCurrentDay();
+    }
 
 }

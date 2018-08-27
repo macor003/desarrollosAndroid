@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="CRJPAPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>crjpa.Categorialinearetencion</class>
+    <class>crjpa.Tipocliente</class>
+    <class>crjpa.Familia</class>
+    <class>crjpa.Cuentacredito</class>
+    <class>crjpa.Pagocredito</class>
+    <class>crjpa.Servicio</class>
+    <class>crjpa.Promociontipodescuento</class>
+    <class>crjpa.Transaccionarticulo</class>
+    <class>crjpa.Tasaimpuestovalor</class>
+    <class>crjpa.Exoneradotipo</class>
+    <class>crjpa.Promocionformadepago</class>
+    <class>crjpa.Depuracion</class>
+    <class>crjpa.Auditoria</class>
+    <class>crjpa.Tipoacreencia</class>
+    <class>crjpa.Serialimpresora</class>
+    <class>crjpa.Articulo</class>
+    <class>crjpa.Moneda</class>
+    <class>crjpa.Opcion</class>
+    <class>crjpa.Acreenciamovimientoauditoria</class>
+    <class>crjpa.Transaccionauditoria</class>
+    <class>crjpa.Transacciondocumento</class>
+    <class>crjpa.Reportez</class>
+    <class>crjpa.Detalletipoformadepago</class>
+    <class>crjpa.Formadepagopuntoagil</class>
+    <class>crjpa.Usuarioperfil</class>
+    <class>crjpa.Unidadventa</class>
+    <class>crjpa.Monedatasacambio</class>
+    <class>crjpa.Entregaformadepago</class>
+    <class>crjpa.Categoria</class>
+    <class>crjpa.Operacionacreencia</class>
+    <class>crjpa.Tipodocumento</class>
+    <class>crjpa.Tipoidentificacioncliente</class>
+    <class>crjpa.Promocionfamilia</class>
+    <class>crjpa.Detalletipoformadepagolinea</class>
+    <class>crjpa.Sesion</class>
+    <class>crjpa.Cliente</class>
+    <class>crjpa.Tipoacreenciaoperacion</class>
+    <class>crjpa.Articulocodigoexterno</class>
+    <class>crjpa.Transaccionarticuloservicio</class>
+    <class>crjpa.Transaccionfase</class>
+    <class>crjpa.Morosidad</class>
+    <class>crjpa.Transaccionformadepago</class>
+    <class>crjpa.Promocioncategoria</class>
+    <class>crjpa.Formadepagomoneda</class>
+    <class>crjpa.Clientemensaje</class>
+    <class>crjpa.Tipodescuento</class>
+    <class>crjpa.Promocionarticulo</class>
+    <class>crjpa.Usuario</class>
+    <class>crjpa.Comprobantefiscalnoutilizado</class>
+    <class>crjpa.Porcentajeimpuestoretencion</class>
+    <class>crjpa.Monedadenominacion</class>
+    <class>crjpa.Perfilproceso</class>
+    <class>crjpa.Tipoclientetipodocumento</class>
+    <class>crjpa.Linea</class>
+    <class>crjpa.Promocion</class>
+    <class>crjpa.Articulounidadventa</class>
+    <class>crjpa.Giroactividadeconomica</class>
+    <class>crjpa.Proceso</class>
+    <class>crjpa.Comprobantefiscalpreimpreso</class>
+    <class>crjpa.Entrega</class>
+    <class>crjpa.Transaccion</class>
+    <class>crjpa.Procesoproperty</class>
+    <class>crjpa.Categorialineaincluye</class>
+    <class>crjpa.Formadepago</class>
+    <class>crjpa.Transaccioncliente</class>
+    <class>crjpa.Promocionlinea</class>
+    <class>crjpa.Tasaimpuestotipo</class>
+    <class>crjpa.Perfil</class>
+    <class>crjpa.Sincronizacion</class>
+    <class>crjpa.Correlativo</class>
+    <class>crjpa.Rolloauditoria</class>
+    <class>crjpa.Devolucion</class>
+    <class>crjpa.Motivorebaja</class>
+    <class>crjpa.Sincronizacionpendientes</class>
+    <class>crjpa.Acreenciamovimiento</class>
+    <class>crjpa.Formadepagotipocliente</class>
+    <shared-cache-mode>NONE</shared-cache-mode>
+    <properties>
+      <property name="javax.persistence.query.timeout" value="5000"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/CRPOS?zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;rewriteBatchedStatements=true"/>
+      <property name="javax.persistence.jdbc.password" value="usercr2"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="usercr2"/>
+      <property name="eclipselink.logging.level" value="SEVERE"/>
+      <property name="javax.persistence.query.timeout" value="3000"/>
+	  <!-- <property name="javax.persistence.lock.timeout" value="4000"/> -->
+	  <property name="eclipselink.jdbc.read-connections.max" value="7"/>
+	  <property name="eclipselink.jdbc.read-connections.min" value="4"/>
+	  <property name="eclipselink.jdbc.read-connections.shared" value="true"/>
+	  <property name="eclipselink.jdbc.write-connections.max" value="15"/>
+	  <property name="eclipselink.jdbc.write-connections.min" value="10"/>
+	  <property name="eclipselink.jdbc.batch-writing" value="jdbc"/>
+	  <property name="eclipselink.jdbc.batch-writing.size" value="1000"/>
+	  <property name="eclipselink.jdbc.cache-statements" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>
