@@ -47,7 +47,7 @@ public class GitHubRepoAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View row = convertView;
+        /*View row = convertView;
 
         if (row == null) {
             LayoutInflater inflater =
@@ -64,6 +64,8 @@ public class GitHubRepoAdapter extends BaseAdapter {
         text2.setText(description);
         textView.setText(message);
 
-        return row;
+        return row;*/
+
+        return null;
     }
 }
