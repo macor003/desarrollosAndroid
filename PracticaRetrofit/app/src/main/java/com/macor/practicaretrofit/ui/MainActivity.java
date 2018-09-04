@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<RMIServerResponse> call, Response<RMIServerResponse> response) {
                 RMIServerResponse responseAnulDev = response.body();
-                Log.i("Informacion", "Llego la petición *******************");
+                Log.i("Información", "Llego la petición *******************");
 
                 progress.dismiss();
                 rView.setAdapter(new CommandsAdapter(MainActivity.this, responseAnulDev));
