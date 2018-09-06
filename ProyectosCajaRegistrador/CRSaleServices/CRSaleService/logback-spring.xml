@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+	<property name="APP_HOME" value="Logs" />
+	<property name="LOGFILE_NAME" value="CRSaleService" />
+
+	<appender name="CONSOLE-APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				%d{HH:mm:ss} | %-5p | %-30.30logger{0} | [Linea->%line] %m%n
+			</Pattern>
+		</layout>
+	</appender>
+
+	<appender name="FILE-APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${APP_HOME}/${LOGFILE_NAME}</file>
+
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${APP_HOME}/${LOGFILE_NAME}_%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<maxFileSize>5MB</maxFileSize>
+			<maxHistory>30</maxHistory>
+			<totalSizeCap>500MB</totalSizeCap>
+		</rollingPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss} | %-5p | %-30.30logger{0} | [Linea->%line] %msg%n
+			</Pattern>
+		</encoder>
+	</appender>
+
+	<root>
+		<appender-ref ref="FILE-APPENDER" />
+		<appender-ref ref="CONSOLE-APPENDER" />
+	</root>
+	
+</configuration>
