@@ -1,4 +1,4 @@
-package com.macor.practicaretrofit.ui.adapter;
+package com.macor.comandas.ui.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,7 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.macor.practicaretrofit.api.model.Commands;
+import com.becoblohm.cr.models.Order;
+import com.macor.comandas.api.model.Commands;
 
 import java.util.List;
 
@@ -18,9 +19,9 @@ public class CommandsAdapter extends RecyclerView.Adapter<CommandsAdapter.ViewHo
 
 
     private Context context;
-    private List<Commands> values;
+    private List<Order> values;
 
-    public CommandsAdapter(Context context, List<Commands> response) {
+    public CommandsAdapter(Context context, List<Order> response) {
 
         this.context = context;
         this.values = response;
@@ -37,8 +38,11 @@ public class CommandsAdapter extends RecyclerView.Adapter<CommandsAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Commands call = values.get(position);
-        holder.showDetails(call);
+        Order order = values.get(position);
+        Commands command = new Commands();
+        command.setName(order.getClient().getName());
+        command.setNumber(order.getOrderNumber());
+        holder.showDetails(command);
     }
 
     @Override

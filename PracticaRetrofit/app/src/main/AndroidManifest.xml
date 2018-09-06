@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/SplashTheme">
 
-        <activity android:name="com.macor.practicaretrofit.ui.MainActivity">
+        <activity android:name="com.macor.comandas.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

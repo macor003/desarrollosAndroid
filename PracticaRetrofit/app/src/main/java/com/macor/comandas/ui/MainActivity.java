@@ -1,4 +1,4 @@
-package com.macor.practicaretrofit.ui;
+package com.macor.comandas.ui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -14,11 +14,9 @@ import android.widget.ListView;
 
 import com.becoblohm.cr.models.Order;
 import com.becoblohm.cr.net.response.RMIServerResponse;
-import com.macor.practicaretrofit.api.model.Commands;
-import com.macor.practicaretrofit.api.service.ServiceClient;
-import com.macor.practicaretrofit.ui.adapter.CommandsAdapter;
+import com.macor.comandas.api.service.ServiceClient;
+import com.macor.comandas.ui.adapter.CommandsAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import io.futurestud.retrofit1.R;
@@ -58,28 +56,18 @@ public class MainActivity extends AppCompatActivity {
         Call<RMIServerResponse> call = client.searchCommands();
 
         call.enqueue(new Callback<RMIServerResponse>() {
-            public static final String TAG = "Error --->>>> ";
 
             @Override
             public void onResponse(Call<RMIServerResponse> call, Response<RMIServerResponse> response) {
                 List<Order> responseList = (List<Order>) response.body().getData();
-                Log.i("Información", "Llego la petición *******************");
-
-                List<Commands> commandsList = new ArrayList<>();
-
-                commandsList.add(new Commands("CAROLINA SOLARES", 326377));
-                commandsList.add(new Commands("FERNANDO ORELLANA", 326379));
-                commandsList.add(new Commands("EDGAR MORA", 326384));
-                commandsList.add(new Commands("ANTONIO PEREZ", 326385));
-                commandsList.add(new Commands("WILLIAM PAIZ", 326390));
-
+                Log.i("", "Llego la petición *******************");
                 progress.dismiss();
-                rView.setAdapter(new CommandsAdapter(MainActivity.this, commandsList));
+                rView.setAdapter(new CommandsAdapter(MainActivity.this, responseList));
             }
 
             @Override
             public void onFailure(Call<RMIServerResponse> call, Throwable t) {
-                Log.i(TAG, t.getMessage());
+                Log.i("ERROR--->>>", t.getMessage());
                 progress.dismiss();
                 //Toast.makeText(MainActivity.this, "error :(", Toast.LENGTH_SHORT).show();
                 AlertDialog.Builder builderAlert = new AlertDialog.Builder(MainActivity.this);

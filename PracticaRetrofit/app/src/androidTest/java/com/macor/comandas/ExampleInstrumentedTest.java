@@ -1,4 +1,4 @@
-package com.macor.practicaretrofit;
+package com.macor.comandas;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

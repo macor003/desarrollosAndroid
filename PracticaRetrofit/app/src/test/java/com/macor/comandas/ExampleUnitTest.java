@@ -1,4 +1,4 @@
-package com.macor.practicaretrofit;
+package com.macor.comandas;
 
 import org.junit.Test;
 
