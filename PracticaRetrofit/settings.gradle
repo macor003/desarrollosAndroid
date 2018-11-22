@@ -1,1 +1,1 @@
-include ':app', ':CRNetModels-3.0.0-GT', ':CRModels-3.0.0-GT', ':CRCore-3.0.0-GT'
+include ':app'

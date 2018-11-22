@@ -16,13 +16,10 @@ import java.util.List;
 import io.futurestud.retrofit1.R;
 
 public class CommandsAdapter extends RecyclerView.Adapter<CommandsAdapter.ViewHolder> {
-
-
     private Context context;
     private List<Order> values;
 
     public CommandsAdapter(Context context, List<Order> response) {
-
         this.context = context;
         this.values = response;
     }
@@ -32,7 +29,6 @@ public class CommandsAdapter extends RecyclerView.Adapter<CommandsAdapter.ViewHo
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item_pagination, parent, false);
-
         return new ViewHolder(v);
     }
 
@@ -51,8 +47,6 @@ public class CommandsAdapter extends RecyclerView.Adapter<CommandsAdapter.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
-
         public TextView nameTxtView;
         public TextView numberTxtView;
 
@@ -60,7 +54,6 @@ public class CommandsAdapter extends RecyclerView.Adapter<CommandsAdapter.ViewHo
             super(itemView);
             nameTxtView = itemView.findViewById(R.id.name);
             numberTxtView = itemView.findViewById(R.id.number);
-
         }
 
         public void showDetails(Commands order) {
@@ -68,7 +61,6 @@ public class CommandsAdapter extends RecyclerView.Adapter<CommandsAdapter.ViewHo
             String number = String.valueOf(order.getNumber());
             nameTxtView.setText(name);
             numberTxtView.setText(number);
-
         }
     }
 }

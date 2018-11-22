@@ -8,9 +8,6 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/CRCore-3.0.0-GT" />
-            <option value="$PROJECT_DIR$/CRModels-3.0.0-GT" />
-            <option value="$PROJECT_DIR$/CRNetModels-3.0.0-GT" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>

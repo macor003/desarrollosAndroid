@@ -1,2 +1,0 @@
-configurations.maybeCreate("default")
-artifacts.add("default", file('CRNetModels-3.0.0-GT.jar'))
